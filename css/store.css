@@ -1,0 +1,429 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Reset to Prevent Overflow */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding/margins don't affect width */
+}
+
+body {
+    background-color: #007bff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-y: scroll; /* Allow vertical scrolling */
+}
+
+/* Styles for the navigation bar */
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Adjusted to space between for logo and menu */
+    align-items: center; /* Center align items vertically */
+    width: 100%;
+    height: 120px;
+    line-height: 100px;
+    background: #007bff;
+    z-index: 100; /* Ensure it stays on top of other elements */
+}
+
+/* Styles for the logo */
+.nav-logo {
+    display: flex; 
+    align-items: center; /* Center align logo and text vertically */
+}
+
+.nav-logo img.logo {
+    height: 100px; /* Adjust the height as needed */
+    margin-right: 20px; /* Space between logo and text */
+    padding-left: 40px;
+}
+
+.nav-logo p {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    padding-left: 60px;
+}
+
+/* Styles for the navigation menu */
+.nav-menu ul {
+    display: flex;
+    background: transparent;
+}
+
+.nav-menu ul li {
+    list-style-type: none; 
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px; 
+    margin: 0 25px;
+}
+
+.link:hover, .active {
+    border-bottom: 2px solid #fff; 
+}
+
+/* Styles for the navigation buttons */
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background: #fb925d;
+}
+
+#registerBtn  {
+    margin-left: 15px;
+    margin-right: 40px;
+}
+
+.btn.white-btn {
+    background: #ff8400;
+    color: #fff;
+}
+
+.btn.btn.white-btn:hover  {
+    background: #ff8400;
+}
+
+/* Styles for the responsive menu button */
+.nav-menu-btn {
+    display: none;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 786px) {
+    .nav-button {
+        display: none;
+    }
+    .nav-menu.responsive  {
+        top: 100px;
+    }
+    .nav-menu {
+        position: fixed; /* Make the menu fixed */
+        top: 100px; /* Adjust the top position */
+        display: flex;
+        justify-content: center;
+        background: rgba(0, 123, 255, 1); 
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+        z-index: 99; /* Ensure it stays below the navbar */
+    }
+    .nav-menu ul  {
+        flex-direction: column; /* Stack menu items vertically */
+        text-align: center; /* Center align text */
+    }
+    .nav-menu ul li .link  {
+        color: #000; /* Change text color to black */
+    }
+    .nav-menu-btn  {
+        display: block; /* Show the menu button */
+        padding-right: 20px; 
+    }
+    .nav-menu-btn i {
+        font-size: 25px; /* Icon size */
+        color: #fff; /* Icon color */
+        padding: 10px; /* Padding around the icon */
+        background:rgba(0, 123, 255, 1);
+        border-radius: 50%; /* Round icon background */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: .3s; /* Smooth transition */
+    }
+    .nav-menu-btn i:hover  {
+        background: rgba(255, 255, 255, 0.15); /* Darker background on hover */
+    }
+    .nav-logo img.logo {
+        height: 50px; /* Adjust the height for smaller screens */ 
+    }
+}
+
+/* Additional responsive styles for very small screens */
+@media only screen and (max-width: 450px) {
+    .nav-logo img.logo {
+        height: 60px; /* Adjust the height for very small screens */
+        padding-left: 30px; /* Add padding to the left */
+        font-size: 70px; /* Adjust font size */
+    }
+    .nav-menu  {
+        top: -1200px; /* Hide the menu initially */
+    }
+    .nav-menu-btn  {
+        padding-right: 20px; /* Add padding to the right */
+    }
+
+    .nav-menu ul li .link {
+        color: #fff; /* Change text color to black */       
+    }
+}
+
+/* Footer Section */
+footer {
+    padding: 3rem 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.footer-menu {
+    margin-bottom: 2rem;
+}
+
+.footer-menu img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-menu .social-links {
+    margin-top: 2rem;
+}
+
+.footer-menu .social-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+}
+
+.footer-menu .social-links ul li {
+    margin: 0;
+}
+
+.footer-menu .social-links ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-menu .social-links ul li a:hover {
+    background-color: #ffc43f;
+    color: #fff;
+}
+
+.footer-menu .widget-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-menu .menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu .menu-list .menu-item {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu .menu-list .menu-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu .menu-list .menu-item a:hover {
+    color: #ffc43f;
+}
+
+.footer-menu form {
+    display: flex;
+    gap: 0;
+}
+
+.footer-menu form .form-control {
+    border: none;
+    border-radius: 0;
+    background-color: #f8f9fa;
+}
+
+.footer-menu form .btn {
+    border: none;
+    border-radius: 0;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-menu form .btn:hover {
+    background-color: #ffc43f;
+    color: #222;
+}
+
+#footer-bottom {
+    background-color: #111;
+    padding: 1rem 0;
+}
+
+#footer-bottom .copyright {
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-menu .social-links ul {
+        justify-content: center;
+    }
+
+    #footer-bottom .copyright {
+        text-align: center;
+    }
+}
+
+/* Store Section Styles */
+.stores-section {
+    padding: 4rem 1rem; /* Add side padding for better spacing */
+    background-color: #007bff; /* Blue background */
+    text-align: center;
+    padding-top: 2rem; /* Reduced padding for better spacing */
+    max-width: 100%; /* Prevents horizontal overflow */
+   
+}
+
+/* Section Title */
+.stores-section h2 {
+    font-size: 2.2rem; /* Adjusted font size for better readability */
+    margin-bottom: 2rem;
+    padding-top: 6rem;
+    color: #fff; /* White text color */
+}
+
+/* Store Container */
+.store {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align content */
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 85%; /* Slightly reduced width for better balance */
+    width: 100%; /* Make sure it takes the full width inside its container */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden; /* Prevents internal content from overflowing */
+    
+}
+
+/* Store Hover Effect */
+.store:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Store Icon */
+.store-icon {
+    font-size: 2.5rem;
+    color: #ff8400; /* Orange color */
+    margin-right: 1rem;
+}
+
+/* Store Information */
+.store-info {
+    flex: 1;
+    text-align: left;
+}
+
+/* Store Address Text */
+.store-info p {
+    font-size: 1rem;
+    color: #333; /* Darker text for better readability */
+    margin-bottom: 0.5rem;
+}
+
+/* View Location Button */
+.view-location {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Location Button */
+.view-location:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet & Medium Screens */
+@media (max-width: 768px) {
+    .store {
+        flex-direction: column; /* Stack icon and text */
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .store-icon {
+        margin-bottom: 0.8rem; /* Space below icon */
+        margin-right: 0;
+    }
+
+    .store-info {
+        text-align: center;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .stores-section {
+        overflow-x: hidden; /* Prevent horizontal overflow */
+        padding-top: 2rem;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .stores-section h2 {
+        font-size: 1.8rem; /* Slightly smaller title */
+    }
+
+    .store {
+        padding: 0.5rem; /* Reduce padding */
+        max-width: 90%; /* Utilize more screen space */
+    }
+
+    .store-icon {
+        font-size: 2rem; /* Reduce icon size */
+        margin-bottom: 0.5rem;
+    }
+
+    .store-info p {
+        font-size: 0.9rem; /* Smaller text */
+    }
+
+    .view-location {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+    }
+}
