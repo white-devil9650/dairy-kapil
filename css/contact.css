@@ -1,9 +1,10 @@
 
- *{  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+/* General Reset to Prevent Overflow */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding/margins don't affect width */
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -18,7 +19,7 @@
     height: 100px;
     line-height: 100px;
     z-index: 100;
-    background-color: #007bff; ;
+    background-color: #007bff;
 }
 
 
@@ -94,6 +95,7 @@
 }
 
 /* Styles for the responsive menu button */
+
 .nav-menu-btn {
     display: none;
 }
@@ -144,11 +146,6 @@
         height: 50px; /* Adjust the height for smaller screens */
     }
     
-     /* Change text color of "Get in touch" heading */
-.contact-wrap h3 {
-   color: #003092; /* Change the color to black */
-}
-
 }
 
 /* Additional responsive styles for very small screens */

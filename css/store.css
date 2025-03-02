@@ -1,14 +1,9 @@
-/* General Reset */
-* {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 /* General Reset to Prevent Overflow */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensures padding/margins don't affect width */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -299,7 +294,6 @@ footer {
     text-align: center;
     padding-top: 2rem; /* Reduced padding for better spacing */
     max-width: 100%; /* Prevents horizontal overflow */
-   
 }
 
 /* Section Title */
@@ -326,7 +320,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden; /* Prevents internal content from overflowing */
-    
 }
 
 /* Store Hover Effect */
